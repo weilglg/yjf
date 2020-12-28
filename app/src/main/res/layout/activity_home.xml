@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <com.cn.lib.widget.shadowlayout.ShadowLinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#F8F8F8"
+        app:l_shadowAlpha="0.2"
+        app:l_shadowElevation="5dp">
+
+        <com.cn.lib.widget.indicator.TabIndicatorView
+            android:id="@+id/layout_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:indicator_textColorNormal="@color/text_hint_color"
+            app:indicator_textColorSelected="@color/home_selected_text"
+            app:indicator_textPaddingBottom="4dp"
+            app:indicator_textPaddingTop="4dp"
+            app:indicator_textSizeNormal="10sp" />
+
+    </com.cn.lib.widget.shadowlayout.ShadowLinearLayout>
+
+
+    <com.cn.lib.widget.CustomViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout" />
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="7dp"-->
+    <!--android:layout_above="@id/layout_tab"-->
+    <!--android:background="@drawable/shape_bottom_to_top_gradient" />-->
+
+
+</RelativeLayout>

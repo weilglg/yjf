@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".modular.internet.activity.NewAccountActivity">
+
+    <include layout="@layout/include_activity_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/pay_cost_company"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/ts_content" />
+
+        <TextView
+            android:id="@+id/pay_cost_company"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="北京燃气集团"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/ts_content" />
+    </LinearLayout>
+
+    <View
+        style="@style/div_horizontal"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/pay_account"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/ts_content" />
+
+        <cn.ygyg.cloudpayment.widget.CleanUpEditText
+            android:id="@+id/pay_account"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:hint="@string/hint_input_pay_account"
+            android:includeFontPadding="false"
+            android:inputType="text"
+            android:lines="1"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_hint_color"
+            android:textCursorDrawable="@drawable/edit_cursor_drawable"
+            android:textSize="@dimen/ts_content" />
+
+        <TextView
+            android:id="@+id/input_account_help"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:text="@string/input_account_help"
+            android:textColor="@color/text_green_color"
+            android:textSize="@dimen/ts_content" />
+    </LinearLayout>
+
+    <View
+        style="@style/div_horizontal"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:text="@string/input_account_alert"
+        android:textColor="@color/text_hint_color"
+        android:textSize="@dimen/ts_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp">
+
+
+        <CheckBox
+            android:id="@+id/agree_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/button_check_box_green"
+            android:checked="true"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="4dp"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/ts_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:text="@string/read_and_agree"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/ts_content" />
+
+        <TextView
+            android:id="@+id/read_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/protocol_title"
+            android:textColor="@color/text_green_color"
+            android:textSize="@dimen/ts_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/next_step"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_bg_full"
+        android:gravity="center"
+        android:text="@string/commit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/ts_btn"
+        android:textStyle="bold" />
+</LinearLayout>

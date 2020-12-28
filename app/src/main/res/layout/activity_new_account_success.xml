@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".modular.internet.activity.NewAccountSuccessActivity">
+
+    <include layout="@layout/include_activity_header" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/icon_success" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/add_account_success"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/ts_btn" />
+
+    <TextView
+        android:id="@+id/to_payments"
+        android:layout_width="275dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/shape_stroke_bg_blue"
+        android:gravity="center"
+        android:text="@string/to_payments"
+        android:textColor="@color/white"
+        android:textSize="@dimen/ts_btn"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/back_to_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/back_to_main"
+        android:textColor="@color/text_gray_dark_color"
+        android:textSize="@dimen/ts_content" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

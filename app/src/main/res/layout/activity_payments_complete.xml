@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".modular.payments.activity.PaymentsCompleteActivity">
+
+    <include layout="@layout/include_activity_header" />
+
+    <ImageView
+        android:id="@+id/state_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:src="@mipmap/icon_success" />
+
+    <TextView
+        android:id="@+id/state_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/payment_success"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/ts_btn" />
+
+    <RelativeLayout
+        android:id="@+id/payments_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:paddingBottom="50dp">
+
+        <TextView
+            android:id="@+id/amount_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/ts_biggest"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/amount_num"
+            android:layout_toRightOf="@+id/amount_num"
+            android:paddingEnd="4dp"
+            android:paddingStart="4dp"
+            android:text="@string/rmb_unit"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/ts_btn"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/to_payments_history"
+        android:layout_width="275dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/shape_stroke_bg_blue"
+        android:gravity="center"
+        android:text="@string/to_payments_history"
+        android:textColor="@color/white"
+        android:textSize="@dimen/ts_btn"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/payment_again"
+        android:layout_width="275dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/shape_stroke_bg_blue"
+        android:gravity="center"
+        android:text="@string/payment_again"
+        android:textColor="@color/white"
+        android:textSize="@dimen/ts_btn"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/back_to_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/back_to_main"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/ts_btn" />
+</LinearLayout>

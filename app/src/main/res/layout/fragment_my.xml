@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="210dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="34dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/bg_my" />
+
+        <com.cn.lib.widget.shadowlayout.ShadowLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="67dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="25dp"
+            app:l_radius="5dp"
+            app:l_shadowAlpha="0.2"
+            app:l_shadowElevation="5dp">
+
+            <cn.ygyg.cloudpayment.widget.CircleImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/avatar1" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/text_color"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </com.cn.lib.widget.shadowlayout.ShadowLinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/btn_nb_recharge_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:drawableLeft="@mipmap/icon_recharge"
+        android:drawableRight="@mipmap/right_arrow"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="@string/nb_recharge_history"
+        android:textColor="@color/text_color"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/layout_nfc_recharge_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/line_color" />
+
+        <TextView
+        android:id="@+id/btn_nfc_recharge_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:drawableRight="@mipmap/right_arrow"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@mipmap/icon_recharge"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:text="@string/nfc_recharge_history"
+        android:textColor="@color/text_color"
+        android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_customer_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/line_color"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/btn_customer_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:drawableRight="@mipmap/right_arrow"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@mipmap/icon_customer_service"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="@string/contact_customer_service"
+            android:textColor="@color/text_color"
+            android:textSize="15sp"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/line_color" />
+
+    <TextView
+        android:id="@+id/btn_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:drawableRight="@mipmap/right_arrow"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@mipmap/icon_about"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:text="@string/about"
+        android:textColor="@color/text_color"
+        android:textSize="15sp"
+        android:visibility="gone"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/line_color"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:drawableRight="@mipmap/right_arrow"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@mipmap/icon_logout"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:text="@string/logout"
+        android:textColor="@color/text_color"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/line_color" />
+
+
+</LinearLayout>

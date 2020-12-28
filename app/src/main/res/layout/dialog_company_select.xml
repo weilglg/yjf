@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="412dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/company_select"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/ts_title" />
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="55dp"
+            android:layout_height="46dp"
+            android:contentDescription="@string/close"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/btn_close_gray" />
+    </LinearLayout>
+
+    <View style="@style/div_horizontal" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp">
+
+        <TextView
+            android:id="@+id/confirm"
+            android:layout_width="275dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_stroke_bg_blue"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ts_btn"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+</LinearLayout>

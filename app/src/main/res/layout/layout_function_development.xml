@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.cn.lib.widget.shadowlayout.ShadowLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="8dp"
+    android:background="@color/white"
+    android:paddingBottom="20dp"
+    android:paddingTop="20dp"
+    app:l_radius="5dp"
+    app:l_shadowAlpha="0.2"
+    app:l_shadowElevation="5dp">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="6dp"
+        android:src="@mipmap/side_hint" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="57dp"
+        android:text="其他功能正在开发中，敬请期待"
+        android:textColor="@color/text_hint_color"
+        android:textSize="14sp" />
+
+
+</com.cn.lib.widget.shadowlayout.ShadowLinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ts_biggest">40sp</dimen>
+    <dimen name="ts_bigger">20sp</dimen>
+    <dimen name="ts_title">17sp</dimen>
+    <dimen name="ts_btn">16sp</dimen>
+    <dimen name="ts_payment">15sp</dimen>
+    <dimen name="ts_content">14sp</dimen>
+    <dimen name="ts_money">13sp</dimen>
+    <dimen name="ts_note">12sp</dimen>
+</resources>

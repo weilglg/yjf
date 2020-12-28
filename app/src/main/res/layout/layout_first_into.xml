@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="10dp">
+
+    <include
+        android:id="@+id/pay_item"
+        layout="@layout/layout_first_recharge" />
+
+    <include
+        android:id="@+id/layout_add_account"
+        layout="@layout/layout_add_account" />
+
+    <include
+        android:id="@+id/developing"
+        layout="@layout/layout_function_development" />
+
+</LinearLayout>

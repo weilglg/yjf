@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:background="#F5F5F5">
+    <TextView
+        android:id="@+id/ladder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="阶梯"></TextView>
+
+    <TextView
+        android:id="@+id/gas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_weight="1.4"
+        android:gravity="end"
+        android:text="本次购气"
+        android:textAlignment="textEnd"></TextView>
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginRight="8dp"
+        android:textAlignment="textEnd"
+        android:text="单价"
+        android:gravity="end"></TextView>
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:layout_marginRight="10dp"
+        android:textAlignment="textEnd"
+        android:text="金额"
+        android:gravity="end"></TextView>
+    <TextView
+        android:id="@+id/totalGas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.6"
+        android:layout_marginRight="8dp"
+        android:textAlignment="textEnd"
+        android:text="可购买气量"
+        android:gravity="end"></TextView>
+</LinearLayout>

@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".modular.nfc.activity.NfcPaymentsActivity">
+
+    <include layout="@layout/include_activity_header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/account_name"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/ts_content" />
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|end"
+                    android:lines="1"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/ts_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/payments_account"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/ts_content" />
+
+                <TextView
+                    android:id="@+id/user_account"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|end"
+                    android:lines="1"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/ts_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/address_msg"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/ts_content" />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|end"
+                    android:lines="1"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/ts_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/account_funds"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/ts_content" />
+
+                <TextView
+                    android:id="@+id/account_balance"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|end"
+                    android:lines="1"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/ts_content" />
+            </LinearLayout>
+
+            <View
+                style="@style/div_horizontal"
+                android:layout_height="10dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/div_wide" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/payments_gas_amount"
+                android:textColor="@color/text_gray_dark_color"
+                android:textSize="@dimen/ts_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/selector_gas50"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_stroke_gray_green"
+                    android:button="@null"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:tag="50"
+                    android:text="@string/gas_50"
+                    android:textColor="@color/selector_black_green"
+                    android:textSize="@dimen/ts_btn" />
+
+                <CheckBox
+                    android:id="@+id/selector_gas100"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_stroke_gray_green"
+                    android:button="@null"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:tag="100"
+                    android:text="@string/gas_100"
+                    android:textColor="@color/selector_black_green"
+                    android:textSize="@dimen/ts_btn" />
+
+                <CheckBox
+                    android:id="@+id/selector_gas200"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_stroke_gray_green"
+                    android:button="@null"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:tag="200"
+                    android:text="@string/gas_200"
+                    android:textColor="@color/selector_black_green"
+                    android:textSize="@dimen/ts_btn" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_stroke_gray"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingEnd="10dp"
+                    android:paddingStart="10dp"
+                    android:text="@string/custom_gasp"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/text_hint_color"
+                    android:textSize="@dimen/ts_content" />
+
+                <EditText
+                    android:id="@+id/input_gas"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical|end"
+                    android:hint="@string/input_gas_amount_hint"
+                    android:inputType="numberDecimal"
+                    android:lines="1"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/text_hint_color"
+                    android:textSize="@dimen/ts_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingEnd="10dp"
+                    android:paddingStart="10dp"
+                    android:text="@string/gas_unit"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/ts_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_stroke_gray"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="@string/payment_amount_name"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/text_hint_color"
+                    android:textSize="@dimen/ts_content" />
+
+                <TextView
+                    android:id="@+id/payment_money"
+                    android:layout_width="285dp"
+                    android:layout_height="match_parent"
+                    android:paddingRight="30dp"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical|end"
+                    android:lines="1"
+                    android:text="计算中..."
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/ts_content" />
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/detail"
+                android:layout_width="120dp"
+                android:layout_height="19dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="20dp"
+                android:button="@null"
+                android:drawableRight="@drawable/arrows"
+                android:text="展开费用明细"
+                android:textColor="@color/text_color_gray"
+                android:textSize="@dimen/ts_content"></CheckBox>
+            android:visibility="gone"
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/nfc_payment_cost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/shape_stroke_gray"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="支付费用"
+                    android:textSize="@dimen/ts_content"
+                    android:textColor="@color/text_color"
+                    android:layout_gravity="center_horizontal">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="购气金额："
+                        android:textColor="@color/text_gray_dark_color"
+                        android:textSize="@dimen/ts_money"
+                        android:layout_weight="1">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/nfc_payment_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:textColor="@color/text_gray_dark_color"
+                        android:textSize="@dimen/ts_money"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="账户金额："
+                        android:textColor="@color/text_gray_dark_color"
+                        android:textSize="@dimen/ts_money"
+                        android:layout_weight="1">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/nfc_account_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:textColor="@color/text_gray_dark_color"
+                        android:textSize="@dimen/ts_money"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="充值金额："
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/ts_money"
+                        android:layout_weight="1">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/nfc_recharge_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/ts_money"></TextView>
+                </LinearLayout>
+
+                <View
+                    style="@style/div_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="13dp"
+                    android:background="@color/div_wide" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="充值金额："
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/ts_content"
+                        android:layout_weight="1">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/actual_payment_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/ts_content"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/actual_payment_cost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/shape_stroke_gray"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="充值明细"
+                    android:textSize="@dimen/ts_content"
+                    android:textColor="@color/text_color"
+                    android:layout_gravity="center_horizontal">
+                </TextView>
+
+                <include layout="@layout/item_payments_cost" style="@style/TextAppearance.AppCompat.Inverse" ></include>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </View>
+
+            <View
+                style="@style/div_horizontal"
+                android:layout_height="10dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/div_wide" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/pay_type"
+                android:textColor="@color/text_gray_dark_color"
+                android:textSize="@dimen/ts_content" />
+
+            <LinearLayout
+                android:id="@+id/wx_pay"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:orientation="horizontal"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@mipmap/icon_wx_pay"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="@string/wx_pay" />
+
+                <ImageView
+                    android:id="@+id/wx_pay_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/icon_item_selector"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/div_horizontal"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="@color/div_wide" />
+
+            <LinearLayout
+                android:id="@+id/ali_pay"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:orientation="horizontal"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@mipmap/icon_ali_pay"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="@string/ali_pay" />
+
+                <ImageView
+                    android:id="@+id/ali_pay_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/icon_item_selector"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/div_horizontal"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp" />
+
+            <TextView
+                android:id="@+id/nfc_payments"
+                android:layout_width="275dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="18dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/shape_stroke_bg_blue"
+                android:gravity="center"
+                android:text="@string/immediately_nfc_payments"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ts_btn"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/nfc_payments_history"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/payments_history"
+                    android:textColor="@color/text_green_color"
+                    android:textSize="@dimen/ts_content" />
+
+
+                <TextView
+                    android:id="@+id/nfc_contact_service"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/contact_customer_service"
+                    android:textColor="@color/text_green_color"
+                    android:textSize="@dimen/ts_content"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

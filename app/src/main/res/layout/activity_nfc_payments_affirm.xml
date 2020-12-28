@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".modular.nfc.activity.NfcPaymentsAffirmActivity">
+
+    <include layout="@layout/include_activity_header" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/bg_red"
+        android:gravity="center_vertical"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:text="请保持手机背面顶部靠近刷卡区"
+        android:textColor="@color/text_color_red"
+        android:textSize="@dimen/ts_note" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:text="订单信息"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center_vertical"
+                android:text="用户姓名"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/ts_content" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="0dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="*刚"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/ts_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center_vertical"
+                android:text="缴费户号"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/ts_content" />
+
+            <TextView
+                android:id="@+id/user_account"
+                android:layout_width="0dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="A9331659000"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/ts_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center_vertical"
+                android:text="购买气量"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/ts_content" />
+
+            <TextView
+                android:id="@+id/pay_count"
+                android:layout_width="0dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="130立方米"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/ts_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center_vertical"
+                android:text="购气金额"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/ts_content" />
+
+            <TextView
+                android:id="@+id/pay_money"
+                android:layout_width="0dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="231.75元"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/ts_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center_vertical"
+                android:text="购气时间"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/ts_content" />
+
+            <TextView
+                android:id="@+id/pay_date"
+                android:layout_width="0dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="2019-11-22 14:11:12"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/ts_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        style="@style/div_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp" />
+
+    <TextView
+        android:id="@+id/affirm"
+        android:layout_width="275dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape_stroke_bg_blue"
+        android:gravity="center"
+        android:text="确认"
+        android:textColor="@color/white"
+        android:textSize="@dimen/ts_btn"
+        android:textStyle="bold" />
+
+</LinearLayout>
