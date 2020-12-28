@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion rootProject.ext.compile_sdk_version
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.min_sdk_version
+        targetSdkVersion rootProject.ext.target_sdk_version
+        versionCode rootProject.ext.version_code
+        versionName rootProject.ext.version_name
+    }
+
+    buildTypes {
+        release {
+            postprocessing {
+                removeUnusedCode false
+                removeUnusedResources false
+                obfuscate false
+                optimizeCode false
+                proguardFile 'proguard-rules.pro'
+            }
+        }
+    }
+
+    compileOptions {
+        targetCompatibility rootProject.ext.javaVersion
+        sourceCompatibility rootProject.ext.javaVersion
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation rootProject.ext.libs.libSupport
+    /*MVP: RxJava+OKHttp+FastJson 需要使用的一些系列包*/
+    api rootProject.ext.libs.libDesign
+    api rootProject.ext.libs.libRetrofit
+    api rootProject.ext.libs.libRxjava
+    api rootProject.ext.libs.libRxjavaAdapter
+    api rootProject.ext.libs.libInterceptor
+    api rootProject.ext.libs.libJson
+    api rootProject.ext.libs.libRxandroid
+    api rootProject.ext.libs.libKotlinJdk
+    api rootProject.ext.libs.libKotlinReflect
+    api rootProject.ext.libs.libGlide
+}
+repositories {
+    mavenCentral()
+}
