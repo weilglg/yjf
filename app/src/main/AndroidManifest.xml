@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="cn.ygyg.cloudpayment">
+    <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
+    <uses-permission android:name="android.permission.NFC" /> <!-- NFC权限 -->
+    <uses-permission
+        android:name="android.permission.WRITE_SECURE_SETTINGS"
+        tools:ignore="ProtectedPermissions" /> <!-- 修改系统设置权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 读取缓存数据 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- Normal Permissions 不需要运行时注册 -->
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 需要运行时注册的权限 -->
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        android:networkSecurityConfig="@xml/network_security_config">
+        <activity android:name=".modular.nfc.activity.NfcPaymentsHistoryActivity"></activity>
+        <activity android:name=".modular.nfc.activity.NfcHintActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".modular.nfc.activity.NfcPaymentsActivity" />
+        <activity android:name=".modular.nfc.activity.NfcPaymentsAffirmActivity"></activity>
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="7a8810e4f048e7fca97d7beb1ee6cef4" />
+
+        <activity
+            android:name=".modular.login.activity.LoginActivity"
+            android:launchMode="singleTask"></activity>
+        <activity android:name=".modular.register.activity.UserAgreementActivity" />
+        <activity android:name=".modular.register.activity.RegisterActivity" />
+        <activity android:name=".modular.password.activity.ResetPasswordActivity" />
+        <activity android:name=".modular.login.activity.BindingPhoneActivity" />
+        <activity
+            android:name=".modular.home.activity.MainTabActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".modular.home.activity.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".modular.internet.activity.NewAccountActivity"
+            android:windowSoftInputMode="adjustPan|stateVisible" />
+        <activity android:name=".modular.internet.activity.ListSelectActivity" />
+        <activity
+            android:name=".modular.internet.activity.NewAccountSuccessActivity"
+            android:noHistory="true" />
+        <activity android:name=".modular.internet.activity.AddressSelectorActivity" />
+        <activity
+            android:name=".modular.payments.activity.PaymentsActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize|stateUnchanged" />
+        <activity android:name=".modular.payments.activity.PaymentsHistoryActivity" />
+        <activity android:name=".modular.payments.activity.PaymentsCompleteActivity" />
+        <activity
+            android:name=".acp.AcpActivity"
+            android:theme="@style/Theme.Transparent" /> <!-- 微信 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".modular.my.activity.AboutActivity" /> <!-- 高德定位服务 -->
+        <service android:name="com.amap.api.location.APSService" />
+    </application>
+
+</manifest>
